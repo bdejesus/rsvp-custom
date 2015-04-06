@@ -353,7 +353,7 @@ function rsvp_frontend_main_form($attendeeID, $rsvpStep = "handleRsvp") {
 	if(get_option(OPTION_HIDE_ADD_ADDITIONAL) != "Y") {
 
     // Render Guest Form Fields
-    $availableGuests = $maxGuests - count($associations);
+    $availableGuests = $maxGuests + 1 - count($associations);
     $form .= "<script type='text/javascript'>
       jQuery(document).ready(function($){
         var i = 0;
